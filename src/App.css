@@ -1,0 +1,13 @@
+.App {
+  text-align: left;
+}
+
+.navbar-logo {
+  width: 31px;
+  height: 31px;
+}
+
+.page-header {
+  margin: 75px 0;
+  text-align: center;
+}
