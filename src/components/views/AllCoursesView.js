@@ -9,7 +9,7 @@ const AllCoursesView = (props) => {
       <h1 className="page-header">Courses</h1>
       <p>There are no courses.</p>
       <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+        <button type="button" class="btn btn-primary">Add New Course</button>
       </Link>
     </div>
     );
@@ -25,13 +25,14 @@ const AllCoursesView = (props) => {
           <Link to={`/course/${course.id}`}>
             <h1>{title}</h1>
           </Link>
-          <button onClick={() => deleteCourse(course.id)}>Delete</button>
+          <button type="button" class="btn btn-danger" onClick={() => deleteCourse(course.id)}>Delete</button>
           </div>
         );
       }
       )}
+      <br />
       <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+        <button type="button" class="btn btn-primary">Add New Course</button>
       </Link>
     </div>
   );

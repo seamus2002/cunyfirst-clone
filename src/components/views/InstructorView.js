@@ -18,7 +18,7 @@ const InstructorView = (props) => {
             <Link to={`/course/${course.id}`}>
               <h4>{course.title}</h4>
             </Link>
-            <button onClick={() => editCourse({id:course.id, instructorId: null})}>x</button>
+            <button type="button" class="btn btn-danger" onClick={() => editCourse({id:course.id, instructorId: null})}>X</button>
             </div>
           );
         })}</div>
@@ -29,7 +29,7 @@ const InstructorView = (props) => {
             <Link to={`/course/${course.id}`}>
               <h4>{course.title}</h4>
             </Link>
-            <button onClick={() => editCourse({id:course.id, instructorId: instructor.id})}>+</button>
+            <button type="button" class="btn btn-primary" onClick={() => editCourse({id:course.id, instructorId: instructor.id})}>+</button>
             </div>
           );
         })}</div>

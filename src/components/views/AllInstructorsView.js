@@ -28,7 +28,7 @@ const AllInstructorsView = (props) => {
 
       })}
       <Link to={`/newinstructor`}>
-        <button>Add New Instructor</button>
+        <button type="button" class="btn btn-primary">Add New Instructor</button>
       </Link>
     </div>
   );
