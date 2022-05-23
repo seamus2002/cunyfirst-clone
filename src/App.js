@@ -12,6 +12,7 @@ import {
   NewCourseContainer,
 } from './components/containers';
 import Navbar from "./components/Navbar";
+import NewInstructorContainer from "./components/containers/NewInstructorContainer";
 
 // if you create separate components for adding/editing 
 // a student or instructor, make sure you add routes to those
@@ -27,6 +28,7 @@ const App = () => {
 
         <Route exact path="/" component={HomePageContainer} />
         <Route exact path="/instructors" component={AllInstructorsContainer} />
+        <Route exact path="/newinstructor" component={NewInstructorContainer} />
         <Route exact path="/instructor/:id" component={InstructorContainer} />
         <Route exact path="/courses" component={AllCoursesContainer} />
         <Route exact path="/newcourse" component={NewCourseContainer} />
