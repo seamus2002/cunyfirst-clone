@@ -16,6 +16,35 @@ export const fetchAllInstructorsThunk = () => async (dispatch) => {
   }
 };
 
+export const addInstructorThunk = (instructor) => async (dispatch) => {
+  try {
+    let res = await axios.post(`${path}/instructors`, instructor);
+    dispatch(ac.addInstructor(res.data));
+    return res.data;
+  } catch(err) {
+    console.error(err);
+  }
+};
+
+export const deleteInstructorThunk = instructorId => async dispatch => {
+  try {
+    await axios.delete(`${path}/instructors/${instructorId}`);
+    //delete successful so change state with dispatch
+    dispatch(ac.deleteInstructor(instructorId));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
+export const editInstructorThunk = instructor => async dispatch => {
+  try {
+    let updatedInstructor = await axios.put(`${path}/instructors/${instructor.id}`, instructor);
+    dispatch(ac.editInstructor(updatedInstructor));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
 //Single instructor
 export const fetchInstructorThunk = (id) => async (dispatch) => {
   // thunk creator would not an be async function 
