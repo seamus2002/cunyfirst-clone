@@ -4,7 +4,7 @@ const NewInstructorView = (props) => {
     <div className="root">
       <div className="formContainer">
         <div className="formTitle">
-          <h2 style={{ fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e' }}>
+          <h2 style={{ textAlign: 'center', fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e' }}>
             New Instructor
           </h2>
         </div>
