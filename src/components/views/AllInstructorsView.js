@@ -8,6 +8,9 @@ const AllInstructorsView = (props) => {
       <div className="container">
         <h1 className="page-header">Instructors</h1>
         <h3>There are no instructors.</h3>
+        <Link to={`/newinstructor`}>
+          <button type="button" class="btn btn-primary">Add New Instructor</button>
+        </Link>
       </div>
     );
   }
