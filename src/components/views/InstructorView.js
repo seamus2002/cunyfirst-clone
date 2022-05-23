@@ -9,6 +9,7 @@ const InstructorView = (props) => {
   return (
     <div className="container">      
       <h1 className="page-header">{instructor.firstname} {instructor.lastname}</h1>
+      <img src={instructor.imageUrl} alt={instructor.firstname + " " + instructor.lastname + " image"} />
       <h3 className="page-header">Department: {instructor.department}</h3>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned courses:
